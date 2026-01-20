@@ -5,6 +5,8 @@ from fastapi import Request
 
 from typing import Dict
 
+from api.schemas import ClaimInput
+
 from models.train import train_pipeline
 from models.predict import predict_claims
 
@@ -29,11 +31,11 @@ def startup_event():
 
 
 @app.post("/predict")
-async def predict(input_data: Dict):
+async def predict(input_data: ClaimInput):
     """
     Accepts JSON input with keys: age, tenure, vehicle_type, claims_history
     Returns predicted claims_count
     """
 
-    prediction = predict_claims(trained_pipeline, input_data)
+    prediction = predict_claims(trained_pipeline, input_data.dict())
     return {"claims_count": prediction}
