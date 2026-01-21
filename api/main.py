@@ -2,6 +2,8 @@ import pandas as pd
 
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 from typing import Dict
 
@@ -27,6 +29,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
@@ -47,6 +51,11 @@ def startup_event():
     trained_pipeline = train_pipeline(X, y)
 
     logger.info("Pipeline trained and ready")
+
+
+@app.get("/")
+def read_index():
+    return FileResponse("frontend/index.html")
 
 
 @app.post("/predict")
