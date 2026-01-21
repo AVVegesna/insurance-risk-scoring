@@ -20,10 +20,27 @@
         <a href="#" class="active">Resources</a>
     </div>
 
-  <main>
-    <section>
-      <p>Hello world!</p>
-    </section>
+  <main class="main">
+    <form>
+        <label for="Age">Age</label>
+        <input type="text" id="Age" placeholder="Your age..">
+
+        <label for="Tenure">How long have you been with your Insurer?</label>
+        <input type="text" id="Tenure"  placeholder="Your tenure..">
+
+        <label for="Vehicle">Vehicle Type</label>
+        <select id="Vehicle">
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Truck">Truck</option>
+            <option value="Motorcycle">Motorcycle</option>
+        </select>
+        
+        <label for="Claim_history">How many claims have you made in the last previous year?</label>
+        <input type="text" id="Claim_history" placeholder="Claim History..">
+        
+        <input type="submit" value="Submit">
+    </form>
   </main>
 
   <footer class="footer">
@@ -36,7 +53,7 @@
     <a href="https://www.linkedin.com/in/a-vegesna/" target="_blank">
         <img src="images/LinkedIn.svg" alt="LinkedIn Profile">
     </a>
-
   </footer>
+
 </body>
 </html>
