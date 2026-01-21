@@ -38,7 +38,15 @@
 
         <label for="Claim_history">How many claims have you made in the last previous year?</label>
         <input type="text" id="Claim_history" placeholder="Claim History..">
-        
+
+        <div id="resultModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Prediction Result</h2>
+                <p id="resultText"></p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+
         <input type="submit" id="submit" value="Submit">
     </form>
   </main>

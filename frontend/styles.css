@@ -103,3 +103,35 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #553236;
 }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: rgb(247, 231, 231);
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}

@@ -15,8 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data.claims_count);
-            alert("Predicted claims_count: " + data.claims_count);
+            const modal = document.getElementById("resultModal");
+            const resultText = document.getElementById("resultText");
+            const closeBtn = document.getElementById("closeModal");
+
+            resultText.textContent = `Predicted claims count: ${data.claims_count}`;
+            modal.classList.remove("hidden");
+
+            closeBtn.onclick = () => {
+                modal.classList.add("hidden");
+            };
         })
         .catch(err => console.error(err));
     });
