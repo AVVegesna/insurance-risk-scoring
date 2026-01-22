@@ -34,6 +34,7 @@ Demo Video:<br>
     - Categorical encoding
     - Model training (via sklearn pipeline)
 - Training Trigger: Application startup (for demo purposes)<br>
+
 In a production system, the model would typically be trained offline and loaded from storage.
 <br>
 
@@ -45,10 +46,12 @@ Backend<br>
 - Pandas
 - Scikit-learn
 - Uvicorn<br>
+
 Frontend<br>
 - HTML5
 - CSS3
 - Vanilla JavaScript (Fetch API)<br>
+
 Infrastructure & DevOps<br>
 - Docker
 - Google Cloud Run
