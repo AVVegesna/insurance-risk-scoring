@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Insurance Risk Scoring</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css" />
+
+  <script src="static/script.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <img src="static/images/AVV.svg" alt="Image of Logo">
+        <a href="#" class="active">Home</a>
+        <a href="#" class="active">About</a>
+        <a href="#" class="active">Resources</a>
+    </div>
+
+  <main class="main">
+    <form>
+        <label for="Age">Age</label>
+        <input type="text" id="Age" placeholder="Your age..">
+
+        <label for="Tenure">How long have you been with your Insurer?</label>
+        <input type="text" id="Tenure"  placeholder="Your tenure..">
+
+        <label for="Vehicle">Vehicle Type</label>
+        <select id="Vehicle">
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Truck">Truck</option>
+            <option value="Motorcycle">Motorcycle</option>
+        </select>
+
+        <label for="Claim_history">How many claims have you made in the last previous year?</label>
+        <input type="text" id="Claim_history" placeholder="Claim History..">
+
+        <div id="resultModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Prediction Result</h2>
+                <p id="resultText"></p>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+
+        <input type="submit" id="submit" value="Submit">
+    </form>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-text">
+        &copy; 2026 Insurance Risk Calculator - Akshay Varma Vegesna
+    </span>
+    <a href="https://github.com/AVVegesna" target="_blank">
+        <img src="static/images/GitHub.svg" alt="GitHub Profile">
+    </a>
+    <a href="https://www.linkedin.com/in/a-vegesna/" target="_blank">
+        <img src="static/images/LinkedIn.svg" alt="LinkedIn Profile">
+    </a>
+  </footer>
+
+</body>
+</html>
