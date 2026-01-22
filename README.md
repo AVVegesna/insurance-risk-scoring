@@ -7,7 +7,7 @@ Live App (Google Cloud Run):<br>
 Docker Image:<br>
 ///<br>
 Demo Video:<br>
-https://youtu.be/pYxfWCzLBi4<br>
+👉https://youtu.be/pYxfWCzLBi4<br>
 <br>
 
 ## Features
@@ -85,7 +85,7 @@ pip install -r requirements.txt
 python -m uvicorn api.main:app --reload
 ```
 Visit<br>
-👉http://127.0.0.1:8080
+👉http://127.0.0.1:8080<br>
 <br>
 
 ## Running with Docker
