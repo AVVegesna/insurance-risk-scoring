@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('submit');
     button.addEventListener('click', () => {
-        fetch("http://127.0.0.1:8000/predict", {
+        event.preventDefault();
+        fetch("/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
