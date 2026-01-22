@@ -1,2 +1,109 @@
-# insurance-risk-scoring
-Building an end-to-end Insurance Risk Scoring Service using pandas, scikit-learn, FastAPI, and Docker — starting with data exploration and environment setup.
+# Insurance Risk Scoring API & Web App
+A full-stack machine learning application that predicts insurance claim counts based on customer and vehicle characteristics.
+The project demonstrates end-to-end ML engineering: data processing, model training, API serving, frontend integration, containerization, and cloud deployment.
+
+Live App (Google Cloud Run):
+👉 https://insurance-app-520162048776.australia-southeast1.run.app
+Docker Image:
+///
+Demo Video:
+https://youtu.be/pYxfWCzLBi4
+
+## Features
+- Predicts insurance claim count using a trained ML pipeline
+- REST API built with FastAPI
+- Frontend built with HTML, CSS, and JavaScript
+- Fully Dockerized
+- Deployed on Google Cloud Run
+- Input validation using Pydantic
+- Logging & error handling
+- CORS-enabled for frontend integration
+
+## Machine Learning Overview
+- Problem Type: Count prediction (claims frequency)
+- Response Variable: claims_count
+- Model Pipeline:
+    - Feature preprocessing
+    - Categorical encoding
+    - Model training (via sklearn pipeline)
+- Training Trigger: Application startup (for demo purposes)
+In a production system, the model would typically be trained offline and loaded from storage.
+
+## Tech Stack
+Backend
+- Python 3.11
+- FastAPI
+- Pydantic
+- Pandas
+- Scikit-learn
+- Uvicorn
+Frontend
+- HTML5
+- CSS3
+- Vanilla JavaScript (Fetch API)
+Infrastructure & DevOps
+- Docker
+- Google Cloud Run
+- Google Artifact Registry
+
+## Project Structure
+```powershell
+insurance-risk-scoring/
+│
+├── api/
+│   ├── main.py            
+│   └── schemas.py         
+│
+├── models/
+│   ├── train.py           
+│   └── predict.py        
+│
+├── frontend/
+│   ├── index.html
+│   ├── static/
+│   │   ├── styles.css
+│   │   ├── script.js
+│   │   └── images/
+│
+├── data/
+│   └── raw/
+│       └── labeled_insurance.csv
+│
+├── Dockerfile
+├── requirements.txt
+└── README.md
+```
+
+## Running Locally (Without Docker)
+```bash
+pip install -r requirements.txt
+python -m uvicorn api.main:app --reload
+```
+Visit
+👉http://127.0.0.1:8080
+
+## Running with Docker
+```bash
+docker build -t insurance-api .
+docker run -p 8000:8080 insurance-api
+```
+
+## Deployment (Google Cloud Run)
+- Container built locally
+- Image pushed to Artifact Registry
+- Deployed using Cloud Run (managed)
+- Public access enabled
+
+## Future Improvements
+- Offline model training & versioning
+- Persistent model storage (GCS)
+- Authentication
+- Feature store integration
+- Monitoring & metrics
+- CI/CD pipeline
+
+## Author
+Akshay Varma Vegesna
+Graduate Software Engineer @ IAG
+LinkedIn: https://www.linkedin.com/in/a-vegesna/
+
