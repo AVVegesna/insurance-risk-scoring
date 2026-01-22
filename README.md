@@ -5,7 +5,11 @@ The project demonstrates end-to-end ML engineering: data processing, model train
 Live App (Google Cloud Run):<br>
 👉 https://insurance-app-520162048776.australia-southeast1.run.app<br>
 Docker Image:<br>
-///<br>
+Pull the Docker image<br>
+```bash
+docker pull australia-southeast1-docker.pkg.dev/insurance-risk-scoring/insurance-repo/insurance-api:latest
+```
+<br>
 Demo Video:<br>
 👉https://youtu.be/pYxfWCzLBi4<br>
 <br>
