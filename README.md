@@ -6,7 +6,7 @@ Live App (Google Cloud Run):<br>
 👉 https://insurance-app-520162048776.australia-southeast1.run.app<br>
 <br>
 Docker Image:<br>
-Pull the Docker image<br>
+👉Pull the Docker image<br>
 ```bash
 docker pull australia-southeast1-docker.pkg.dev/insurance-risk-scoring/insurance-repo/insurance-api:latest
 ```
@@ -44,11 +44,11 @@ Backend<br>
 - Pydantic
 - Pandas
 - Scikit-learn
-- Uvicorn
+- Uvicorn<br>
 Frontend<br>
 - HTML5
 - CSS3
-- Vanilla JavaScript (Fetch API)
+- Vanilla JavaScript (Fetch API)<br>
 Infrastructure & DevOps<br>
 - Docker
 - Google Cloud Run
