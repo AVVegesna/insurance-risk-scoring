@@ -9,6 +9,7 @@ Docker Image:<br>
 Demo Video:<br>
 https://youtu.be/pYxfWCzLBi4<br>
 <br>
+
 ## Features
 - Predicts insurance claim count using a trained ML pipeline
 - REST API built with FastAPI
@@ -19,6 +20,7 @@ https://youtu.be/pYxfWCzLBi4<br>
 - Logging & error handling
 - CORS-enabled for frontend integration
 <br>
+
 ## Machine Learning Overview
 - Problem Type: Count prediction (claims frequency)
 - Response Variable: claims_count
@@ -29,6 +31,7 @@ https://youtu.be/pYxfWCzLBi4<br>
 - Training Trigger: Application startup (for demo purposes)<br>
 In a production system, the model would typically be trained offline and loaded from storage.
 <br>
+
 ## Tech Stack
 Backend<br>
 - Python 3.11
@@ -46,6 +49,7 @@ Infrastructure & DevOps<br>
 - Google Cloud Run
 - Google Artifact Registry
 <br>
+
 ## Project Structure
 ```powershell
 insurance-risk-scoring/
@@ -73,6 +77,7 @@ insurance-risk-scoring/
 ├── requirements.txt
 └── README.md
 ```
+<br>
 
 ## Running Locally (Without Docker)
 ```bash
@@ -80,19 +85,22 @@ pip install -r requirements.txt
 python -m uvicorn api.main:app --reload
 ```
 Visit<br>
-👉http://127.0.0.1:8080<br>
+👉http://127.0.0.1:8080
+<br>
 
 ## Running with Docker
 ```bash
 docker build -t insurance-api .
 docker run -p 8000:8080 insurance-api
 ```
+<br>
 
 ## Deployment (Google Cloud Run)
 - Container built locally
 - Image pushed to Artifact Registry
 - Deployed using Cloud Run (managed)
 - Public access enabled
+<br>
 
 ## Future Improvements
 - Offline model training & versioning
@@ -101,6 +109,7 @@ docker run -p 8000:8080 insurance-api
 - Feature store integration
 - Monitoring & metrics
 - CI/CD pipeline
+<br>
 
 ## Author
 Akshay Varma Vegesna<br>
