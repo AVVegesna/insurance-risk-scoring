@@ -44,7 +44,7 @@ def startup_event():
 
     logger.info("Starting application and training pipeline")
 
-    df = pd.read_csv("C:/Users/Sam/Documents/GitHub/insurance-risk-scoring/data/raw/labeled_insurance.csv")
+    df = pd.read_csv("data/raw/labeled_insurance.csv")
     X = df.drop(columns=["claims_count"])
     y = df["claims_count"]
 
